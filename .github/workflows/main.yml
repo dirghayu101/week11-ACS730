@@ -1,10 +1,9 @@
 name: tfsec
 on:
   push:
-    branches:
-      - dev
-      - prod
+    branches: [prod, dev, staging]
   pull_request:
+    branches: [prod]
 jobs:
   tfsec:
     name: tfsec sarif report
